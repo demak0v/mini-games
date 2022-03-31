@@ -1,0 +1,237 @@
+/* ROOT */
+* {
+  box-sizing: border-box;
+  color: #fff;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  /* background: #10090e; */
+}
+
+h1 {
+  margin: 0;
+}
+
+/* CONTENT CONTAINER, OVERALL PAGE STUFF */
+.full-screen {
+  min-height: 100vh;
+  position: relative;
+
+  background: #10090e;
+}
+
+.content {
+  padding: 0 15%;
+}
+
+/********************** SETTINGS **********************/
+.settings {
+  position: absolute;
+
+  top: 20px;
+  left: 20px;
+
+  transform: rotate(0);
+  z-index: 999;
+
+  cursor: pointer;
+}
+
+.fa-solid {
+  font-size: calc(2vh + 2vw + 10px);
+  color: #3d2235;
+}
+
+.spin-right {
+  animation: spin-right 1s 1;
+}
+
+.spin-left {
+  animation: spin-left 1s 1;
+}
+
+@keyframes spin-right {
+  100% {
+    transform: rotate(360deg)
+  }
+}
+
+@keyframes spin-left {
+  100% {
+    transform: rotate(-360deg)
+  }
+}
+
+.settings-content {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  z-index: 99;
+}
+
+.settings-content > * {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.settings-content h1 {
+  margin: 10% 0;
+  cursor: pointer;
+  font-size: 1.7rem;
+}
+/********************** HEADING **********************/
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding-top: 5%;
+
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  position: relative;
+}
+
+/********************** SIMON GAME *******************/
+.simon-game {
+  /* main container */
+  margin-top: 5%;
+
+  position: relative;
+  min-height: 70vh;
+  height: 70vh;
+
+  display: flex;
+  flex-direction: column;
+  align-content: stretch;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.simon-boxes {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+
+  max-height: 70vh;
+  width: calc(15vw + 30vh);
+  min-width: 0;
+}
+
+.box {
+  /* boxes sizing */
+  width: 48%;
+  min-width: 0;
+  padding-top: 48%;
+  margin-top: 2%;
+
+  border: solid #fff 2px;
+  border-radius: 2.3%;
+  filter: brightness(0.8);
+
+  position: relative;
+}
+
+/* main preset colors */
+.color-1set {
+  background: #FBE7C6;
+}
+
+.color-2set {
+  background: #B4F8C8;
+}
+
+.color-3set {
+  background: #A0E7E5;
+}
+
+.color-4set {
+  background: #FFAEBC;
+}
+
+.score {
+  margin-top: 3%;
+
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+
+  /* score and play button */
+}
+
+/********************STYLES FOR JS****************/
+
+.state-glow {
+  /* glowing state for boxes */
+  filter: brightness(1.02) saturate(1.5);
+  box-shadow: -1px -1px 10px #fff, 1px 1px 10px #fff;
+  transition: all 0.2s ease;
+}
+
+.state-blurred-dim {
+  /* state of game when using settings */
+  filter: blur(10px) brightness(0.4);
+  transform: scale(1.1)
+}
+
+.appended-number {
+  /* numbers that float when box is pressed multiple times */
+  margin: 0;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  font-family: 'Montserrat', sans-serif;
+  color: #fff;
+  font-size: 3rem;
+}
+
+.appended-number::selection {
+  /* transparent selection */
+  background: rgba(255, 255, 128, 0);
+}
+
+.pointer {
+  /* pointer for play and again */
+  cursor: pointer;
+}
+
+.text-highlight {
+  text-shadow: -1px -1px 5px #fff, 1px 1px 5px #fff;
+}
+
+.color-1 {
+  background: #887BB0;
+}
+
+.color-2 {
+  background: #F65156;
+}
+
+.color-3 {
+  background: #E9EAEC;
+}
+
+.color-4 {
+  background: #F652A0;
+}
+
+.display-none {
+  display: none;
+}
