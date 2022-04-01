@@ -4,10 +4,12 @@ My mini-games project with use of jQuery, css responsive styling, js requestAnim
 I've done my best for creating my web version of simon game. I feel like I need to take a break from it to improve myself and then come back. So far, it works pretty good.
 
 What I've used:
-Web Audio API for audio — issues only mobile Safari, has a big delay
-requestAnimationFrame for settings appearance animating
-Document Fragment to append multiple elements at once to DOM
-jQuery library 
+— Web Audio API for audio — issues only mobile Safari, has a big delay
+— requestAnimationFrame for settings appearance animating
+— Document Fragment to append multiple elements at once to DOM
+— jQuery library 
+
+
 
 CSS calc function for responsive sizing of squares and settings icon
 
